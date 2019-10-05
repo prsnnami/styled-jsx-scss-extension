@@ -1,0 +1,46 @@
+{
+  "name": "vscode-styled-sass",
+  "displayName": "vscode-styled-sass",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "Prasanna",
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "source.scss.jsx.styled",
+        "aliases": [
+          "CSS (Styled JSX)"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "source.scss.jsx.styled",
+        "scopeName": "source.scss.jsx.styled",
+        "path": "./syntaxes/css.json"
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.ts",
+          "source.jsx",
+          "source.js.jsx",
+          "source.tsx"
+        ],
+        "scopeName": "styled-jsx",
+        "path": "./syntaxes/jsx-styled.json",
+        "embeddedLanguages": {
+          "source.css.scss": "css",
+          "meta.embedded.line.ts": "typescript"
+        }
+      }
+    ]
+  }
+}
